@@ -2,7 +2,7 @@ import openai
 import time
 
 # Use the API key from your OpenAI account
-openai.api_key = "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"
+openai.api_key = "API KEY GOES HERE"
 
 def main():
 
