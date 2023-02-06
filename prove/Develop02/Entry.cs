@@ -26,7 +26,7 @@ public class Entry
         
     }
 
-    public void SaveFile(string prompt)
+    public void SaveFile(string prompt) 
     {
         string fileName = "journalEntries.txt";
 
