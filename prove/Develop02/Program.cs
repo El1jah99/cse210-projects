@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-
+// To generate writing prompts, you must add your openai API key to openaiPrompt.py
 class Program 
 {
     static void Main(string[] args)
@@ -37,11 +37,14 @@ class Program
                 Entry entry = new Entry();
                     entry.DisplayPrompt();
                     string prompt = File.ReadAllText("JournalPrompts.txt");
-                    Console.WriteLine(prompt);
+                    Console.WriteLine(prompt);            
                     entry._dateTime = dateText;
                     entry._journalEntry = Console.ReadLine();
-                    entry.SaveFile(prompt);
-                    
+                
+
+                    if (entry._journalEntry != "5")
+                        entry.SaveFile(prompt);
+                
             }
 
             else if (userInputInt == 2)

@@ -1,10 +1,10 @@
 import openai
 
 # Use the API key from your OpenAI account
-openai.api_key = "YOUR API KEY - Get one for free at https://platform.openai.com/account/api-keys"
+apikey = "YOUR API KEY - Get one for free at https://platform.openai.com/account/api-keys"
+openai.api_key = apikey
 
 def main():
-
 
     response = getPrompt()
     
@@ -41,4 +41,12 @@ def getPrompt():
 
     return response["choices"][0]["text"]
 
-main()
+
+if __name__ == "__main__":
+
+    if apikey != "YOUR API KEY - Get one for free at https://platform.openai.com/account/api-keys":
+        main()
+
+    else:
+        print("Please enter your openai API key into openaiPrompt.py. Type 5 to return to menu.")
+    
