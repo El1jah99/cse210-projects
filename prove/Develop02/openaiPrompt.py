@@ -1,29 +1,15 @@
 import openai
-import time
 
 # Use the API key from your OpenAI account
-openai.api_key = "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"
+openai.api_key = "YOUR API KEY - Get one for free at https://platform.openai.com/account/api-keys"
 
 def main():
 
 
     response = getPrompt()
     
-
-    # count = 0
-
-    # if response[-1] != "." or response[-1] != "?" or response[-1] != "!" or response[-1] != ":":
-        
-    #     time.sleep(5)
-
-    #     getPrompt()
-
-    # else:
-
     generated_prompt = response.rstrip()
 
-      # Print the generated prompt
-    # print(generated_prompt)
 
     # Write the prompt to the "JournalPrompts.txt" file
 
@@ -40,9 +26,6 @@ def main():
         file.writelines(lines[2:])
     
     return generated_prompt
-
-        
-
 
 
 def getPrompt():

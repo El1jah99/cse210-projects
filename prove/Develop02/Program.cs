@@ -2,24 +2,20 @@ using System;
 using System.IO;
 
 
-class Program
+class Program 
 {
     static void Main(string[] args)
     {
-
 
         Menu menu1 = new Menu();
         
             menu1._optionOne = "1. Write";
             menu1._optionTwo = "2. Display";
-            menu1._optionThree = "3. Load";
-            menu1._optionFour = "4. Save";
+            menu1._optionThree = "3. Import";
+            menu1._optionFour = "4. Export";
             menu1._optionFive = "5. Quit";
             menu1._userPrompt = "What would you like to do?"; 
-        
-
-        
-
+ 
 
         Console.WriteLine("Welcome to your journal!");
         
@@ -30,7 +26,6 @@ class Program
 
         int userInputInt;
         
-        //int counter = 0;
 
         do
         {
@@ -47,7 +42,6 @@ class Program
                     entry._journalEntry = Console.ReadLine();
                     entry.SaveFile(prompt);
                     
-                //counter += 1;
             }
 
             else if (userInputInt == 2)
@@ -70,7 +64,7 @@ class Program
 
                 var pastEntries = File.ReadLines(userPastEntriesFile);
                 
-                using (StreamWriter outputFile = new StreamWriter(journalFile, true))
+                using (StreamWriter outputFile = new StreamWriter(journalFile))
 
                 foreach (string line in pastEntries)
                 {
@@ -97,14 +91,8 @@ class Program
 
         } while (userInputInt != 5);
 
-        
-
-
-
 
     }
     
-
-
 
 }

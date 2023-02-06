@@ -4,27 +4,25 @@ using System.Diagnostics;
 
 public class Entry
 {
-    //public string _prompt;
     
     public string _dateTime;
 
     public string _journalEntry; 
 
-    public void DisplayPrompt()
+    public void DisplayPrompt() //Runs openaiPrompt.py to get a prompt from GPT-3. You may need to update the path
     {
-        
-        Process p = new Process();
-        p.StartInfo = new ProcessStartInfo("C:/Users/El1ja/AppData/Local/Programs/Python/Python310/python.exe", "openaiPrompt.py");
-        p.Start();
-        p.StartInfo.RedirectStandardOutput = true;
-        p.StartInfo.RedirectStandardError = true;
-        p.Start();
-        string output = p.StandardOutput.ReadToEnd();
-        string error = p.StandardError.ReadToEnd();
-        p.WaitForExit();
+        var userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
 
-        
-        
+        Process p = new Process();
+
+            p.StartInfo = new ProcessStartInfo(userProfile + "/AppData/Local/Programs/Python/Python310/python.exe", "openaiPrompt.py");
+            p.Start();
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.RedirectStandardError = true;
+            p.Start();
+            string output = p.StandardOutput.ReadToEnd();
+            string error = p.StandardError.ReadToEnd();
+            p.WaitForExit();
         
     }
 
@@ -34,7 +32,7 @@ public class Entry
 
         using (StreamWriter outputFile = new StreamWriter(fileName, true))
         {
-            // You can add text to the file with the WriteLine method
+            
             outputFile.WriteLine();
             outputFile.WriteLine(_dateTime);
             outputFile.WriteLine(prompt);
