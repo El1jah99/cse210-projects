@@ -48,5 +48,5 @@ if __name__ == "__main__":
         main()
 
     else:
-        print("Please enter your openai API key into openaiPrompt.py. Type 5 to return to menu.")
+        print("Please enter your openai API key into openaiPrompt.py. Type 5 to return to menu")
     
