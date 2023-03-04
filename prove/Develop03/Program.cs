@@ -7,8 +7,6 @@ class Program
         string userInput;
     
 
-        //int scriptureLength = 0;
-
         do
         {
                     
@@ -20,8 +18,8 @@ class Program
             //Console.WriteLine($"Input the text of {reference}:");
             //string text = Console.ReadLine();
 
-            string reference = "John 3:16";
-            string text = "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.";
+            string reference = "John 3:16-17";
+            string text = "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. \nFor God sent not his Son into the world to condemn the world; but that the world through him might be saved.";
     
 
             scripture.SetReference(reference);
@@ -35,12 +33,10 @@ class Program
 
             words.SetReference(reference);
             words.SetText(text);
-            //words.SetCounter(counter);
+           
 
             userInput = words.HideWords();
             
-            //Console.WriteLine("\nHit enter to continue, or type quit to exit.");
-            //userInput = Console.ReadLine();
 
         } 
         while (userInput != "quit");
