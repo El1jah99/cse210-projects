@@ -5,9 +5,6 @@ using System.Collections.Generic;
 public class Timer
 {
 
-    // private List<string> _animation = new List<string>()
-    // {".","..","...",""};
-
     string[] _animationFrames = new string[] 
     {
             "|o   ",

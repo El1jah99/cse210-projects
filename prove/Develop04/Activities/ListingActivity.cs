@@ -60,7 +60,7 @@ public class ListingActivity : Activity
                 i++;
             }
 
-            StartTimer().DisplayAnimation($"You listed {i} items!", 5);
+            StartTimer().DisplayAnimation($"You listed {i} positive things!", 5);
      
     }
 

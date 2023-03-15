@@ -9,30 +9,27 @@ public class Activity
     private int _activityDuration;
     private Timer _timer = new Timer();
 
-
     public Activity()
     {
 
     }
     
+    public virtual void StartActivity()
+    { 
 
-     public virtual void StartActivity()
-     { 
+    }
+    public void EndActivity() 
+    {
+        Console.Clear();
 
-     }
-        public void EndActivity() 
-        {
-            Console.Clear();
+        Console.WriteLine("Good Job!");
+        _timer.PauseTimer(5);
 
-            Console.WriteLine("Good Job!");
-            _timer.PauseTimer(5);
+        Console.WriteLine($"You spent {_activityDuration} seconds on the {_activityName}.");
+        _timer.PauseTimer(5);
 
-            Console.WriteLine($"You spent {_activityDuration} seconds on the {_activityName}.");
-            _timer.PauseTimer(5);
-
-            Console.Clear();
-        }
-
+        Console.Clear();
+    }
 
 
     public void DisplayWelcomeMessage()
@@ -59,12 +56,10 @@ public class Activity
 
     }
 
-
     public Timer StartTimer()
     {
         return _timer;
     }
-
 
     public string GetActivityName()
     {
