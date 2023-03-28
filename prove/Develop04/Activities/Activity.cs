@@ -7,6 +7,7 @@ public class Activity
     private string _activityName;
     private string _activityDescription;
     private int _activityDuration;
+    
     private Timer _timer = new Timer();
 
     
@@ -14,22 +15,26 @@ public class Activity
     { 
 
     }
+
     public void EndActivity() 
     {
+
         Console.Clear();
 
         Console.WriteLine("Good Job!");
-        _timer.PauseTimer(5);
+        _timer.BouncyBall(5);
 
         Console.WriteLine($"You spent {_activityDuration} seconds on the {_activityName}.");
-        _timer.PauseTimer(5);
+        _timer.BouncyBall(5);
 
         Console.Clear();
+
     }
 
 
     public void DisplayWelcomeMessage()
     {
+
         Console.WriteLine($"Welcome to the {_activityName}.\n");
 
         _timer.Count(2);
@@ -45,10 +50,9 @@ public class Activity
 
         Console.WriteLine("Prepare yourself...");
 
-        StartTimer().PauseTimer(8);
+        StartTimer().BouncyBall(8);
 
         Console.Clear();
-
 
     }
 

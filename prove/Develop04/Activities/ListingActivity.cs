@@ -42,25 +42,24 @@ public class ListingActivity : Activity
         Console.WriteLine("Respond to the following prompt with as many answers as you can think of:");
         Console.WriteLine($"{_listingPrompts[_random.Next(_listingPrompts.Count)]}\n");
 
-
     }
 
     private void CountInputs()
     {
 
-         DateTime futureTime = StartTimer().GetFutureTime(GetActivityDuration());
+        DateTime futureTime = StartTimer().GetFutureTime(GetActivityDuration());
 
-            int i = 0;
+        int i = 0;
 
-            while (!StartTimer().IsTimeUp(futureTime))
-            {
-                Console.Write("~ ");
-                Console.ReadLine();
+        while (!StartTimer().IsTimeUp(futureTime))
+        {
+            Console.Write($"{i+1} - ");
+            Console.ReadLine();
 
-                i++;
-            }
+            i++;
+        }
 
-            StartTimer().DisplayAnimation($"You listed {i} positive things!", 5);
+        StartTimer().DisplayAnimation($"You listed {i} positive things!", 5);
      
     }
 
