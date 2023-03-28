@@ -12,10 +12,10 @@ public class ReflectionActivity : Activity
     }
 
     private List<string> _reflectionPrompts = new List<string>(){
-            "Think of a time when you stood up for someone else.",
-            "Think of a time when you did something really difficult.",
-            "Think of a time when you helped someone in need.",
-            "Think of a time when you did something truly selfless."};
+        "Think of a time when you stood up for someone else.",
+        "Think of a time when you did something really difficult.",
+        "Think of a time when you helped someone in need.",
+        "Think of a time when you did something truly selfless."};
 
     private List<string> _reflectionQuestions = new List<string>(){
         "Why was this experience meaningful to you?",
@@ -35,10 +35,11 @@ public class ReflectionActivity : Activity
 
         DisplayReflectionPrompt();
 
-        Console.WriteLine("Take some time to reflect on each of these question:");
-            StartTimer().DisplayCountdown("Begin in", 5);
+        Console.WriteLine("Take some time to reflect on each of these questions:");
+
+        StartTimer().DisplayCountdown("Begin in", 5);
             
-            DisplayReflectionQuestions();
+        DisplayReflectionQuestions();
 
     }
 
