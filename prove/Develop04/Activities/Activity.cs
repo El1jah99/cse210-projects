@@ -9,10 +9,6 @@ public class Activity
     private int _activityDuration;
     private Timer _timer = new Timer();
 
-    public Activity()
-    {
-
-    }
     
     public virtual void StartActivity()
     { 

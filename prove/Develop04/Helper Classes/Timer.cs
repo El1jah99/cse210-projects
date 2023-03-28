@@ -17,7 +17,7 @@ public class Timer
         };
 
 
-    public bool CheckIfTimeHasPast(DateTime futureTime)
+    public bool IsTimeUp(DateTime futureTime)
     {
        
         DateTime currentTime = DateTime.Now;
