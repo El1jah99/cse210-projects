@@ -12,6 +12,7 @@ public class Program
         commands["3"] = new CreateFlashcardsCommand();
         commands["4"] = new CreateQuizCommand();
         commands["5"] = new DeleteFlashcardsCommand();
+        commands["6"] = new DeleteQuizzesCommand();
 
             string userInput;
             int userInputInt;
@@ -30,7 +31,7 @@ public class Program
 
                     userInputInt = Convert.ToInt32(userInput);
 
-                    if (userInputInt > 5)
+                    if (userInputInt > 6)
                     {
                         Console.Clear();
                         Environment.Exit(0);
@@ -41,12 +42,13 @@ public class Program
                     commands[userInput].Execute();
 
                 
-                }while(userInputInt < 6);
+                }while(userInputInt < 7);
 
             }
 
             catch (Exception)
                 {
+                    Console.Clear();
                     Environment.Exit(0);
                 }
 

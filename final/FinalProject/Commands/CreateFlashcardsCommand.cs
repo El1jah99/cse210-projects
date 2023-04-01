@@ -11,7 +11,7 @@ class CreateFlashcardsCommand : Command
 
         newFlashcards.SetFolder("FlashcardFiles");
 
-        newFlashcards.SetInstructions("--DELETE INSTRUCTIONS BEFORE SAVING-- \n Question | Answer");
+        newFlashcards.SetInstructions("Question|Answer");
 
         newFlashcards.SetSetType("studyset");
 
