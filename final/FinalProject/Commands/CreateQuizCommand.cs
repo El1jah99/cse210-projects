@@ -11,7 +11,7 @@ class CreateQuizCommand : Command
 
         newFlashcards.SetFolder("QuizFiles");
 
-        newFlashcards.SetInstructions("--DELETE INSTRUCTIONS BEFORE SAVING-- \n Question|Answer 1|Answer 2|Answer 3|Correct answer index (starting with 0)");
+        newFlashcards.SetInstructions("Question|Answer 1|Answer 2|Answer 3|Answer 4|Correct answer number (1-4)");
 
         newFlashcards.SetSetType("quiz");
 
