@@ -3,6 +3,9 @@ using System.IO;
 
 public class StudyFlashcards : StudySession
 {
+
+    private int _numFlashcardsStudied;
+
     private Dictionary<string, string> flashcardDictionary = new Dictionary<string, string>();
 
     public override void StartStudySession()
@@ -12,10 +15,24 @@ public class StudyFlashcards : StudySession
 
     }
 
+    public override void EndStudySession()
+    {
+        EndFlashcards();
+    }
+
+    private void EndFlashcards()
+    {
+        Console.Clear();
+
+        Console.WriteLine($"\nYou have completed your study session. You studied {_numFlashcardsStudied} flashcards.\n");
+
+        Console.ReadLine();
+    }
+
     private void StartFlashcards()
     {   
 
-        string filePath = ManageFiles.ChooseFile();
+        string filePath = ManageFiles.ChooseFile("FlashcardFiles");
 
         AddToDictionary(filePath);
 
@@ -41,12 +58,14 @@ public class StudyFlashcards : StudySession
                 break;
             }
 
+
+            _numFlashcardsStudied += 1;
         }
 
 
     }
 
-    public void AddToDictionary(string fileName)
+    private void AddToDictionary(string fileName)
     {
 
         string[] lines = File.ReadAllLines(fileName);
@@ -60,22 +79,6 @@ public class StudyFlashcards : StudySession
         }
         
     }
-
-
-   public void DisplayQuestion(string question)
-    {   
-
-        Console.WriteLine(question);
-
-    }
-    public void DisplayAnswer(string question)
-    {
-        
-        Console.WriteLine(flashcardDictionary[question]);
-    
-    }
-
-    
 
 
 

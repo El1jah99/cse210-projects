@@ -2,11 +2,12 @@ using System;
 
 
 class ManageFiles
-{
+{   
+
     
-    public static string ChooseFile()
+    public static string ChooseFile(string folder)
     {
-        string folderPath = Path.Combine(Environment.CurrentDirectory, "FlashcardFiles");
+        string folderPath = Path.Combine(Environment.CurrentDirectory, folder);
 
         string[] files = Directory.GetFiles(folderPath);
 
@@ -31,11 +32,11 @@ class ManageFiles
     }
 
 
-    public static void DeleteFile()
+    public static void DeleteFile(string folder)
     {
-        string folderPath = Path.Combine(Environment.CurrentDirectory, "FlashcardFiles");
+        string folderPath = Path.Combine(Environment.CurrentDirectory, folder);
         
-        string filePath = ChooseFile();
+        string filePath = ChooseFile(folder);
 
         if (filePath == null)
         {
@@ -49,8 +50,6 @@ class ManageFiles
             Console.WriteLine($"{Path.GetFileName(filePath)} has been deleted.");
         }
     }
-
-
 
 
 

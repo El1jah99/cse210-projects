@@ -6,7 +6,8 @@ class DeleteFlashcardsCommand : Command
     
     public override void Execute()
     {
-        ManageFiles.DeleteFile();
+        string folder = "FlashcardFiles";
+        ManageFiles.DeleteFile(folder);
 
     }
 

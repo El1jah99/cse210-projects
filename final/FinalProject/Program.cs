@@ -8,8 +8,10 @@ public class Program
         Dictionary<string, Command> commands = new Dictionary<string, Command>();
 
         commands["1"] = new StudyFlashcardsCommand();
-        commands["2"] = new CreateFlashcardsCommand();
-        commands["3"] = new DeleteFlashcardsCommand();
+        commands["2"] = new TakeQuizCommand();
+        commands["3"] = new CreateFlashcardsCommand();
+        commands["4"] = new CreateQuizCommand();
+        commands["5"] = new DeleteFlashcardsCommand();
 
             string userInput;
             int userInputInt;
@@ -28,8 +30,9 @@ public class Program
 
                     userInputInt = Convert.ToInt32(userInput);
 
-                    if (userInputInt > 3)
+                    if (userInputInt > 5)
                     {
+                        Console.Clear();
                         Environment.Exit(0);
                     }
 
@@ -38,7 +41,7 @@ public class Program
                     commands[userInput].Execute();
 
                 
-                }while(userInputInt < 4);
+                }while(userInputInt < 6);
 
             }
 
