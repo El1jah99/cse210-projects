@@ -9,11 +9,6 @@ public class CreateFlashcardFile
     private string _subject;
 
 
-
-    
-
-    
-
     public void CreateFile()
     {
         //string folderPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
@@ -21,18 +16,35 @@ public class CreateFlashcardFile
 
         string filePath = Path.Combine(folderPath, $"{_subject}.txt");
 
-        using (StreamWriter writer = new StreamWriter(filePath))
+        try
         {
-            writer.WriteLine("DELETE -- Write your flashcards like this \nQuestion | Answer --");
-            
-        }
-
+        
         Process.Start(new ProcessStartInfo()
         {
             FileName = filePath,
             UseShellExecute = true
             
         });
+        }
+
+        catch
+        {
+        
+
+        using (StreamWriter writer = new StreamWriter(filePath))
+        {
+            writer.WriteLine("DELETE -- Write your flashcards like this -- \nDELETE -- Question | Answer --");
+            
+        }
+        
+        Process.Start(new ProcessStartInfo()
+        {
+            FileName = filePath,
+            UseShellExecute = true
+            
+        });
+
+        }
 
     }
 

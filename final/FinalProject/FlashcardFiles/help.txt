@@ -1,2 +1,0 @@
-DELETE -- Write your flashcards like this 
-Question | Answer --
