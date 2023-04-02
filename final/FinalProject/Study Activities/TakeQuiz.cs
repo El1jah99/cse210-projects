@@ -5,8 +5,6 @@ public class TakeQuiz : StudySession
 {
     private string _fileName;
 
-    private string _score;
-
 
     public void SetFileName()
     {
@@ -71,49 +69,60 @@ public class TakeQuiz : StudySession
 
             for (int i = 0; i < choices.Count; i++)
             {
+
                 Console.WriteLine($"{i + 1}. {choices[i]}");
+
             }
 
             Console.Write("Enter your answer (1-4): ");
+
             int userAnswer = int.Parse(Console.ReadLine());
 
             if (userAnswer == answerkey[questionNumber])
             {
+
                 Console.WriteLine("Correct!");
                 totalCorrect++;
                 report.Add($"Question {questionNumber}: correct");
+
             }
+
             else
             {
+
                 Console.WriteLine("Incorrect.");
                 report.Add($"Question {questionNumber}: incorrect");
+
             }
 
             Console.WriteLine();
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
+
             questionNumber++;
         }
 
         // Print report
         Console.Clear();
         Console.WriteLine("Quiz report:");
+
         foreach (string line in report)
         {
+
             Console.WriteLine(line);
+
         }
+
         Console.WriteLine($"Score: {totalCorrect}/{totalQuestions}");
         Console.ReadLine();
 
-        _score = ($"{totalCorrect/totalQuestions * 100}%");
-    
     }
 
 
     private void EndQuiz()
     {
         Console.Clear();
-        Console.WriteLine($"You scored {_score} on this quiz");
+        Console.WriteLine($"Nice Work!\nPress enter to return to the main menu.");
         Console.ReadLine();
     }
 

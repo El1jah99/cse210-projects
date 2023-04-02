@@ -1,0 +1,5 @@
+What is inheritance in OOP?|The process of creating a new class from an existing class|The ability of an object to take on many forms|The process of hiding implementation details|A type of class that can't be instantiated|1
+What is encapsulation in OOP?|The process of creating a new class from an existing class|The ability of an object to take on many forms|The process of hiding implementation details|A type of class that can't be instantiated|3
+What is polymorphism in OOP?|The process of creating a new class from an existing class|The ability of an object to take on many forms|The process of hiding implementation details|A type of class that can't be instantiated|2
+What is abstraction in OOP?|The process of creating a new class from an existing class|The ability of an object to take on many forms|The process of hiding implementation details|A type of class that can't be instantiated|3
+What is a constructor in OOP?|A special method used to create and initialize an object|A method used to retrieve data from an object|A method used to modify the state of an object|A method used to destroy an object|1

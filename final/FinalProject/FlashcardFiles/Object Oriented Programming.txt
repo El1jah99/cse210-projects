@@ -1,0 +1,10 @@
+What is OOP?|Object-Oriented Programming is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
+What are the four pillars of OOP?|Encapsulation, Inheritance, Abstraction, and Polymorphism.
+What is inheritance in OOP?|Inheritance is a mechanism in which one class acquires the properties (fields and methods) of another class. It allows for the creation of a hierarchy of classes.
+What is polymorphism in OOP?|Polymorphism is the ability of an object to take on many forms. In OOP, it is achieved through method overriding and overloading.
+What is an object in OOP?|An object is an instance of a class. It can contain data in the form of fields and code in the form of methods.
+What is encapsulation in OOP?|Encapsulation is the process of hiding the implementation details of an object from the outside world, and only exposing a public interface to interact with the object.
+What is a constructor in OOP?|A constructor is a special method that is used to create and initialize objects of a class.
+What is a destructor in OOP?|A destructor is a special method that is called when an object is about to be destroyed, and is used to release any resources that the object has acquired during its lifetime.
+What is a method in OOP?|A method is a block of code that can be called on an object to perform a specific task. It can take parameters and return a value.
+What is an interface in OOP?|An interface is a collection of abstract methods that define a contract for classes that implement it. It allows for polymorphism and loose coupling between classes.
