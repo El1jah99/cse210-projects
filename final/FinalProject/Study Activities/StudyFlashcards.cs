@@ -11,7 +11,7 @@ public class StudyFlashcards : StudySession
     public override void StartStudySession()
     {
 
-       StartFlashcards(); 
+        StartFlashcards();
 
     }
 
@@ -19,7 +19,7 @@ public class StudyFlashcards : StudySession
     {
 
         EndFlashcards();
-        
+
     }
 
     private void EndFlashcards()
@@ -30,7 +30,7 @@ public class StudyFlashcards : StudySession
 
         Console.ReadLine();
     }
-    
+
     private void AddToDictionary(string fileName)
     {
 
@@ -43,11 +43,11 @@ public class StudyFlashcards : StudySession
             flashcardDictionary.Add(parts[0], parts[1]);
 
         }
-        
+
     }
 
     private void StartFlashcards()
-    {   
+    {
 
         string filePath = ManageFiles.ChooseFile("FlashcardFiles");
 

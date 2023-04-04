@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 class CreateFlashcardsCommand : Command
 {
-    
+
     public override void Execute()
     {
         CreateFiles newFlashcards = new CreateFiles();
@@ -19,12 +19,7 @@ class CreateFlashcardsCommand : Command
 
         newFlashcards.CreateFile();
 
-
-
     }
-
-
-
 
 
 }

@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 class CreateQuizCommand : Command
 {
-    
+
     public override void Execute()
     {
         CreateFiles newFlashcards = new CreateFiles();

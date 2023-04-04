@@ -24,31 +24,31 @@ public class CreateFiles
 
         try
         {
-        
-        Process.Start(new ProcessStartInfo()
-        {
-            FileName = filePath,
-            UseShellExecute = true
-            
-        });
+
+            Process.Start(new ProcessStartInfo()
+            {
+                FileName = filePath,
+                UseShellExecute = true
+
+            });
         }
 
         catch
         {
-        
 
-        using (StreamWriter writer = new StreamWriter(filePath))
-        {
-            writer.WriteLine(_instructions);
-            
-        }
-        
-        Process.Start(new ProcessStartInfo()
-        {
-            FileName = filePath,
-            UseShellExecute = true
-            
-        });
+
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                writer.WriteLine(_instructions);
+
+            }
+
+            Process.Start(new ProcessStartInfo()
+            {
+                FileName = filePath,
+                UseShellExecute = true
+
+            });
 
         }
 
@@ -65,7 +65,7 @@ public class CreateFiles
         Console.WriteLine($"Type the name of the subject of your {_type}:");
         string subject = Console.ReadLine();
         _subject = subject;
-        
+
     }
 
     public string GetInstructions()

@@ -8,12 +8,12 @@ public class TakeQuiz : StudySession
 
     public void SetFileName()
     {
-       _fileName = ManageFiles.ChooseFile("QuizFiles");
+        _fileName = ManageFiles.ChooseFile("QuizFiles");
     }
     public override void StartStudySession()
     {
         SetFileName();
-        StartQuiz(); 
+        StartQuiz();
 
     }
 
@@ -24,28 +24,28 @@ public class TakeQuiz : StudySession
 
     private void StartQuiz()
     {
-    
+
         Dictionary<string, List<string>> questions = new Dictionary<string, List<string>>();
         Dictionary<int, int> answerkey = new Dictionary<int, int>();
 
         string[] lines = File.ReadAllLines(_fileName);
 
-        int questionNum = 1; 
+        int questionNum = 1;
 
         foreach (string line in lines)
         {
-            
+
 
             string[] parts = line.Split('|');
             string question = parts[0];
 
-            List<string> choices = new List<string> {parts[1], parts[2], parts[3], parts[4]};
+            List<string> choices = new List<string> { parts[1], parts[2], parts[3], parts[4] };
             int answer = int.Parse(parts[5]);
 
             int correctIndex = int.Parse(parts[5]);
 
             questions.Add(question, choices);
-            answerkey.Add(questionNum, answer); 
+            answerkey.Add(questionNum, answer);
 
             questionNum++;
         }

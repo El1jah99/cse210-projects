@@ -2,9 +2,9 @@ using System;
 
 
 class ManageFiles
-{   
+{
 
-    
+
     public static string ChooseFile(string folder)
     {
         string folderPath = Path.Combine(Environment.CurrentDirectory, folder);
@@ -35,7 +35,7 @@ class ManageFiles
     public static void DeleteFile(string folder)
     {
         string folderPath = Path.Combine(Environment.CurrentDirectory, folder);
-        
+
         string filePath = ChooseFile(folder);
 
         if (filePath == null)

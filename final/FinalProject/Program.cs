@@ -4,7 +4,7 @@ public class Program
 {
     static void Main(string[] args)
     {
-        
+
         Dictionary<string, Command> commands = new Dictionary<string, Command>();
 
         commands["1"] = new StudyFlashcardsCommand();
@@ -14,43 +14,43 @@ public class Program
         commands["5"] = new DeleteFlashcardsCommand();
         commands["6"] = new DeleteQuizzesCommand();
 
-            string userInput;
-            int userInputInt;
+        string userInput;
+        int userInputInt;
 
-            
-            try
+
+        try
+        {
+
+            do
             {
 
-                do
-                {
-                    
-                    Menu menu = new Menu();
-                    menu.DisplayMenu();
+                Menu menu = new Menu();
+                menu.DisplayMenu();
 
-                    userInput = Console.ReadLine(); 
+                userInput = Console.ReadLine();
 
-                    userInputInt = Convert.ToInt32(userInput);
+                userInputInt = Convert.ToInt32(userInput);
 
-                    if (userInputInt > 6)
-                    {
-                        Console.Clear();
-                        Environment.Exit(0);
-                    }
-
-                    Console.Clear();
-
-                    commands[userInput].Execute();
-
-                
-                }while(userInputInt < 7);
-
-            }
-
-            catch (Exception)
+                if (userInputInt > 6)
                 {
                     Console.Clear();
                     Environment.Exit(0);
                 }
+
+                Console.Clear();
+
+                commands[userInput].Execute();
+
+
+            } while (userInputInt < 7);
+
+        }
+
+        catch (Exception)
+        {
+            Console.Clear();
+            Environment.Exit(0);
+        }
 
 
 
