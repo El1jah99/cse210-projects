@@ -1,23 +1,11 @@
 using System;
 
 
-public class StudySession
+public abstract class StudySession
 {
+    public abstract void StartStudySession();
 
-
-    public virtual void StartStudySession()
-    {
-
-    }
-
-    public virtual void EndStudySession()
-    {
-        
-
-    }
-
-
-
+    public abstract void EndStudySession();
 
 }
 
